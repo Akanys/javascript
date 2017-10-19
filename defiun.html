@@ -6,18 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script language="javascript">
-        function changetaille(taille) {
-            document.getElementById('texte').style.fontSize = taille + 'px';
-        }
-    </script>
 </head>
 
 <body>
 
-    <div onclick="javascript:changetaille(taille)" id="texte">Hello world!</div>
+    <button id="funky" type="button" onclick="funk()" style="font-size: 20px; display: block; margin: auto; margin-top: 50px; background-color: #fff; border: none;">Hello World !</button>
 
-    
+    <script>
+
+        function funk() {
+
+            var ftSize = document.getElementById('funky').style.fontSize;
+            var test = '20px';
+
+            if (ftSize == test) {
+                document.getElementById('funky').style.fontSize = '50px';
+            }
+            else {
+                document.getElementById('funky').style.fontSize = '20px';
+            }
+        }
+
+    </script>
 
 </body>
 
