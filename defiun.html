@@ -10,16 +10,24 @@
 
 <body>
 
-    <p>
-        <a onclick="scaleorder">Hello world!</a>
-    </p>
+    <p id="myP">This is a paragraph.</p>
 
-    <script type="text/javascript">
-        function scaleorder {
-            document.getElementById('message').innerHTML = 'Mon nouveau message';
-        }
+    <button type="button" onclick="myFunction()">Set font size</button>
+
+    <button type="button" onclick="myFuncTion()">Set font size</button>
+ 
+    <script>
+    function myFunction() {
+        document.getElementById("myP").style.fontSize = "xx-large";
+    }
+
+
+    function myFuncTion() {
+    document.getElementById("myP").style.fontSize = "x-large";
+    }
+
     </script>
-
+        
 </body>
 
 </html>
