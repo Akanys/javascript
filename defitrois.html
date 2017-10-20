@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="customEasingFunction">
+        <div id="texte" onkeydown="gurky"></div>
+    </div>
+
+    <style>
+        #texte{
+            background-color: #1212db; 
+            width: 100px;
+            height: 100px;
+            margin: auto; 
+            margin-top: 400px;}
+
+    </style>
+
+    <script>
+
+        function doWn() {
+            texte.style.marginTop = '400px'
+        }
+
+        window.onkeydown = function (e) {            
+            var key = e.keyCode || e.which;
+            var hgt = parseInt(document.getElementById('texte').style.marginTop);
+            switch (key) {
+                case 38:
+                    texte.style.marginTop = '200px'
+                    setTimeout(doWn, 1000)
+                    break;
+                default:
+                    break;
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>

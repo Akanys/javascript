@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+
+<body>
+
+    <div style="width: 400px; margin: auto;">
+        <button type="button" onclick="kunki()">Change</button>
+        <button type="button" onclick="color('#00FF00')">Color change</button>
+        <button type="button" onclick="color('#1212db')">Color base</button>
+        <button type="button" onclick="appear('none')">None</button>
+        <button type="button" onclick="appear('block')">Block</button>
+    </div>
+
+    <div id="texte"></div>
+
+    <style>
+        #texte{
+            background-color: #1212db;
+            width: 100px; 
+            height: 100px; 
+            margin: auto;
+            margin-top: 200px; 
+            padding-top: 0px;
+        }
+    </style>
+
+    <script>
+
+        function color(couleur) {
+            texte.style.backgroundColor = couleur;
+        }
+
+        function appear(dsplay) {
+            texte.style.display = dsplay;
+        }
+
+        function kunki() {
+
+            var padtop = parseInt(texte.style.paddingTop);
+
+            if (padtop < 300) {
+                texte.style.paddingTop = (padtop + 10) + 'px';
+                texte.style.width = (padtop + 110) + 'px';
+            }
+            else {
+                texte.style.paddingTop = '0px';
+                texte.style.width ='100px';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
